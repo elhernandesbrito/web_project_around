@@ -1,0 +1,11 @@
+.cards__card_interation {
+    display:grid;
+    grid-template-columns:215px 21px ;
+    grid-template-rows:45px ;
+    column-gap: 25px;
+    width: 282px;
+    height: 45px;
+    margin-top: 0px;
+    margin-left: 0px;
+    
+}

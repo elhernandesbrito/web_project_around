@@ -10,7 +10,7 @@
   
   .popup_change_display{
       display:flex;
-      margin:auto;
+      margin-top:auto;
       position:fixed;
   }
  

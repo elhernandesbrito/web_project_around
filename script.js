@@ -13,10 +13,12 @@ const elements = document.querySelector('.elements');
 const copyright = document.querySelector('.copyright');
 const cards = document.querySelector('.cards');
 let card = cards.querySelector('.cards__card');
+let like = document.querySelectorAll('.cards__card-like');
 
 editarPerfil.addEventListener('click', toggleFormDisplay)
 closeButton.addEventListener('click', changeDisplayToNone )
 submitSave.addEventListener('click', handleProfileFormSubmit)
+
 
 function toggleFormDisplay() {
    popup.classList.toggle('popup_change_display')
@@ -34,7 +36,6 @@ function handleProfileFormSubmit(event) {
    inputExplorar.value = '';
    changeDisplayToNone();
 }
-
 
 
 
