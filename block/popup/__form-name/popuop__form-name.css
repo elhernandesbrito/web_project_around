@@ -1,0 +1,27 @@
+.popup__form-name {
+    margin-top:44px;
+    width:358px;
+    height:27px;
+    margin-left:36px;
+    line-height:16.94px;
+    font-size:14px;
+    font-weight:400px;
+    border:0;
+    border-bottom:1px solid #000000;
+    color:#000000;
+}
+@media screen and (max-width:320px) and  (max-height:2814px) {
+
+    .popup__form-name {
+        margin-top:66px;
+        width:238px;
+        height:26px;
+        margin-left:22px;
+        font-size:14px;
+        font-weight:400px;
+        line-height:16.94px;
+        border:0;
+        border-bottom:1px solid #000000;
+        color:#000000;
+    }  
+}
