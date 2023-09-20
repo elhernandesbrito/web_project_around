@@ -21,6 +21,7 @@ closeButton.addEventListener('click', changeDisplayToNone )
 submitSave.addEventListener('click', handleProfileFormSubmit)
 
 
+
 function toggleFormDisplay() {
    popup.classList.toggle('popup_change_display')
 }
@@ -37,6 +38,8 @@ function handleProfileFormSubmit(event) {
    inputExplorar.value = '';
    changeDisplayToNone();
 }
+
+   
 
 
 

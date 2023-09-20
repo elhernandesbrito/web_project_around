@@ -1,8 +1,8 @@
 .cards__card_interation {
     display:grid;
-    grid-template-columns:180px  21px;
+    grid-template-columns:225px  21px;
     grid-template-rows:45px ;
-    column-gap: 45px;
+    column-gap: 18px;
     width: 282px;
     height: 45px;
     margin-top: 0px;
