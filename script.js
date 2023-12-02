@@ -12,14 +12,22 @@ const header = document.querySelector('.header');
 const elements = document.querySelector('.elements');
 const copyright = document.querySelector('.copyright');
 const cards = document.querySelector('.cards');
-let card = cards.querySelector('.cards__card');
-let like = document.querySelectorAll('.cards__card-like');
-
+const card = cards.querySelector('.cards__card');
+const like = document.querySelectorAll('.cards__card-like');
+const addCards = document.querySelector('.profile__addButton-vetor');
+const popupCards = document.querySelector('.popupCards');
+const popupCardsForm = document.querySelector('.popupCards__form');
+const SaveCards = document.querySelector('.popupCards__submit-save');
 
 editarPerfil.addEventListener('click', toggleFormDisplay)
 closeButton.addEventListener('click', changeDisplayToNone )
 submitSave.addEventListener('click', handleProfileFormSubmit)
 
+addCards.addEventListener('click', toggleFormDisplay)
+
+function toggleFormDisplay() {
+   popupCards.classList.toggle('popupCards_display')
+}
 
 
 function toggleFormDisplay() {
@@ -39,7 +47,26 @@ function handleProfileFormSubmit(event) {
    changeDisplayToNone();
 }
 
-   
+/*
+
+function toggleFormDisplay() {
+   popupCards.classList.toggle('popupCards_change_display')
+}
+
+function changeDisplayToNone() {
+   popupCards.classList.remove('popupCards_change_display')
+}
+
+function handleProfileFormSubmit(event) {
+   event.preventDefault();
+   profileName.textContent =  inputName.value;
+   profileExplorer.textContent = inputExplorar.value;
+   inputName.value = '';
+   inputExplorar.value = '';
+   changeDisplayToNone();
+}
+
+   */
 
 
 
