@@ -10,7 +10,6 @@
 @import url(../block/profile/__info/__edit/profile__edit.css);
 @import url(../block/profile/__info/__explorer/profile__explorer.css);
 @import url(../block/profile/__addButon/profile__addButon.css);
-@import url(../block/popupCards/popupCards.css);
 @import url(../block/cards/cards.css);
 @import url(../block/cards/__card/cards__card.css);
 @import url(../block/cards/__card/__card-img/cards__card-img.css);
@@ -22,7 +21,14 @@
 @import url(../block/popup/__closeButton/popup__closeButton.css);
 @import url(../block/popup/__form/popup__form.css);
 @import url(../block/popup/__form/__EditarPerfil/popup__EditarPerfil.css);
-@import url(../block/popup/__form/__form-name/popuop__form-name.css);
+@import url(../block/popup/__form/__form-name/popup__form-name.css);
 @import url(../block/popup/__form/__form-Explorar/popup__form-Explorar.css);
 @import url(../block/popup/__form/__submit-save/popup__submit-save.css);
+@import url(../block/popupCards/popupCards.css);
+@import url(../block/popupCards/__closeButton/popupCards__closeButton.css);
+@import url(../block/popupCards/__form/popupCards__form.css);
+@import url(../block/popupCards/__form/__EditarPerfil/popupCards\,__EditarPerfil.css);
+@import url(../block/popupCards/__form/__form-name/popupCards__form-name.css);
+@import url(../block/popupCards/__form/__form-Link/popupCards__form-Link.css);
+@import url(../block/popupCards/__form/__submit-save/popupCards__submit-save.css);
 @import url(../block/footer/footer.css);

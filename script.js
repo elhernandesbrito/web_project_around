@@ -15,20 +15,11 @@ const cards = document.querySelector('.cards');
 const card = cards.querySelector('.cards__card');
 const like = document.querySelectorAll('.cards__card-like');
 const addCards = document.querySelector('.profile__addButton-vetor');
-const popupCards = document.querySelector('.popupCards');
-const popupCardsForm = document.querySelector('.popupCards__form');
-const SaveCards = document.querySelector('.popupCards__submit-save');
+
 
 editarPerfil.addEventListener('click', toggleFormDisplay)
 closeButton.addEventListener('click', changeDisplayToNone )
 submitSave.addEventListener('click', handleProfileFormSubmit)
-
-addCards.addEventListener('click', toggleFormDisplay)
-
-function toggleFormDisplay() {
-   popupCards.classList.toggle('popupCards_display')
-}
-
 
 function toggleFormDisplay() {
    popup.classList.toggle('popup_change_display')
