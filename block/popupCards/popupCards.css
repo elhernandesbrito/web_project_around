@@ -8,7 +8,7 @@
     top:0;
   }
   
-  .popupCards_display{
+  .popupCards_change_display{
       display:flex;
       margin-top:auto;
       position:fixed;

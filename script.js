@@ -15,6 +15,11 @@ const cards = document.querySelector('.cards');
 const card = cards.querySelector('.cards__card');
 const like = document.querySelectorAll('.cards__card-like');
 const addCards = document.querySelector('.profile__addButton-vetor');
+const popupCards = document.querySelector('.popupCards');
+const popupCardsForm = document.querySelector('.popupCards__form');
+const popupCards__closeButton = document.querySelector('.popupCards__closeButton');
+const popupCards__save = document.querySelector('.popupCards__submit-save');
+
 
 
 editarPerfil.addEventListener('click', toggleFormDisplay)
@@ -38,29 +43,17 @@ function handleProfileFormSubmit(event) {
    changeDisplayToNone();
 }
 
-/*
+addCards.addEventListener('click', toggleCardsDisplay)
+popupCards__closeButton.addEventListener('click', changeCardsToNone)
+/*popupCards__save.addEventListener('click', handleProfileCardsSubmit)*/
 
-function toggleFormDisplay() {
+function toggleCardsDisplay() {
    popupCards.classList.toggle('popupCards_change_display')
 }
 
-function changeDisplayToNone() {
+function changeCardsToNone() {
    popupCards.classList.remove('popupCards_change_display')
 }
-
-function handleProfileFormSubmit(event) {
-   event.preventDefault();
-   profileName.textContent =  inputName.value;
-   profileExplorer.textContent = inputExplorar.value;
-   inputName.value = '';
-   inputExplorar.value = '';
-   changeDisplayToNone();
-}
-
-   */
-
-
-
 
 
 
