@@ -19,7 +19,10 @@ const popupCards = document.querySelector('.popupCards');
 const popupCardsForm = document.querySelector('.popupCards__form');
 const popupCards__closeButton = document.querySelector('.popupCards__closeButton');
 const popupCards__save = document.querySelector('.popupCards__submit-save');
-
+const cardPopupTitle = document.querySelector('.popupCards__form-name');
+const cardPopupLink = document.querySelector('.popupCards__form-Link');
+const cardName = document.querySelector('.cards__card-name');
+const cardImage = document.querySelector('.cards__card-img');
 
 
 editarPerfil.addEventListener('click', toggleFormDisplay)
@@ -45,7 +48,7 @@ function handleProfileFormSubmit(event) {
 
 addCards.addEventListener('click', toggleCardsDisplay)
 popupCards__closeButton.addEventListener('click', changeCardsToNone)
-/*popupCards__save.addEventListener('click', handleProfileCardsSubmit)*/
+popupCards__save.addEventListener('click', insertCards)
 
 function toggleCardsDisplay() {
    popupCards.classList.toggle('popupCards_change_display')
@@ -53,7 +56,19 @@ function toggleCardsDisplay() {
 
 function changeCardsToNone() {
    popupCards.classList.remove('popupCards_change_display')
+   
 }
+
+function insertCards(event){
+   event.preventDefault();
+   cardName.textContent = cardPopupTitle.value;
+   /*cardImage.textContent = cardPopupLink.value;*/
+   cardPopupTitle.value = '';
+  /* cardPopupLink.value = '';*/
+
+   changeCardsToNone();
+}
+
 
 
 
