@@ -1,0 +1,12 @@
+.rechardCards {
+    width: 880px;
+    height: 743px;
+    margin-top: 40px;
+    margin-left: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 17px;
+    row-gap: 21px;
+    position: absolute;
+}

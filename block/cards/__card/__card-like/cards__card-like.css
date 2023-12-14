@@ -11,6 +11,3 @@
     opacity: 50%;
 }
 
-.cards__card-like:active {
-    background-image: url(/images/vectorHeartactive.png);
-}
