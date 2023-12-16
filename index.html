@@ -26,21 +26,20 @@
                         </div>
                         
                         <div class="profile__addButton">
-                            <img src="./images/VectorAdd.png" alt="imagem button adicionar" class="profile__addButton-vetor">
+                            <img src="./images/VectorAdd.png" alt="imagem button adicionar" class="profile__addButton-cards">
                         </div>
                 </div>
             </section>
 
             <div class="rechardCards"></div>     
 
-            <template class="cards">
+            <template id="cards">
                 <div class="cards__card">
-                    <img class="cards__card-img" alt="" src="">
-                    <img class="cards__card-lixeira" alt="" src="./images/Trash.png">
+                    <img class="cards__card-img" src="" alt="">
+                    <img class="cards__card-lixeira" src="./images/Trash.png" alt="" >
                     <div class="cards__card_interation">
                         <h5 class="cards__card-name"></h5>
-                        <buton class="cards__card-like"><img alt="" src="./images/heart.png"></buton>
-                        
+                        <buton class="cards__card-like"><img src="./images/heart.png" alt="" ></buton>
                     </div>
                 </div>
             </template>
@@ -62,7 +61,7 @@
                 <form class="popupCards__form" name="register">
                     <h3 class="popupCards__EditarPerfil">Novo Local</h3>
                     <input type="text" name="name" value="Título" placeholder="Nome" class="popupCards__form-name">
-                    <input type="text" name="link" value="link" placeholder="Link da imagem" class="popupCards__form-Link">
+                    <input type="url" name="link" value="link" placeholder="Link da imagem" class="popupCards__form-Link">
                     <button type="submit" class="popupCards__submit-save">Criar</button>
                 </form>
             </section>
