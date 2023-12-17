@@ -1,0 +1,9 @@
+.cards__zoom-close {
+    width:20px;
+    height:20px;
+    position:fixed;
+    margin-left:840px;
+    margin-top:70px;
+    border:#000000;
+    cursor:pointer;
+}

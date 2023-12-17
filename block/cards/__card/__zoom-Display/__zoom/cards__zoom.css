@@ -1,0 +1,8 @@
+.cards__zoom {
+    display: flex;
+    margin-top: 100px;
+    width: 816px;
+    height: 540px;
+    position:fixed;
+    align-content: center;
+}

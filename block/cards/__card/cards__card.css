@@ -5,8 +5,8 @@
     background-color: #FFFFFF;
     position: relative;
     display: flex;
-    flex-direction: column; ;
- 
+    flex-direction: column;
+    cursor: pointer;
 }
 
 @media screen and (max-width:320px) and  (max-height:2814px) {
