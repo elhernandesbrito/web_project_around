@@ -1,4 +1,4 @@
-.cards__zoom_close{
+    .imageDisplay__close{
     width:20px;
     height:20px;
     position:fixed;
@@ -10,7 +10,7 @@
 
 @media screen and (max-width:320px) and  (max-height:2814px) {
 
-    .cards__zoom_close{
+    .imageDisplay__close{
         width:30px;
         height:30px;
         margin-left:290px;

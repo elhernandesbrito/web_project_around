@@ -21,9 +21,9 @@ const popupCardsForm = popupCards.querySelector('.popupCards__form');
 const cardPopupTitle = popupCardsForm.querySelector('.popupCards__form-name');
 const cardPopupLink = popupCardsForm.querySelector('.popupCards__form-Link');
 const popupCards__save = popupCardsForm.querySelector('.popupCards__submit-save');
-const cardZoom = document.querySelector('.cards__zoom_Display');
-const CloseZoon = document.querySelector('.cards__zoom_close');
-const ImgZoom = cardZoom.querySelector('.cards__zoom_img');
+const cardZoom = document.querySelector('.imageDisplay');
+const CloseZoon = document.querySelector('.imageDisplay__close');
+const ImgZoom = cardZoom.querySelector('.imageDisplay__img');
 
 editarPerfil.addEventListener('click', toggleFormDisplay)
 closeButton.addEventListener('click', changeDisplayToNone )
@@ -98,7 +98,7 @@ const initialCards = [
     CloseZoon.addEventListener('click',CardsZoomDisplayToNone )
 
     function toggleCardsZoomDisplay() {
-      cardZoom.classList.toggle('cards__zoom_Display_change_display');
+      cardZoom.classList.toggle('imageDisplay_change_display');
 
         let imgElement = document.createElement("img");
         imgElement.src = cardImage.src;
@@ -106,7 +106,7 @@ const initialCards = [
     }
 
     function CardsZoomDisplayToNone () {
-      cardZoom.classList.remove('cards__zoom_Display_change_display')
+      cardZoom.classList.remove('imageDisplay_change_display')
     }
 
    return CardItem

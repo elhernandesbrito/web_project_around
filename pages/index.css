@@ -11,6 +11,10 @@
 @import url(../block/profile/__info/__explorer/profile__explorer.css);
 @import url(../block/profile/__addButon/profile__addButon.css);
 @import url(../block/cards/cards.css);
+@import url(../block/imageDisplay/imageDisplay.css);
+@import url(../block/imageDisplay/__close/imageDisplay__close.css);
+@import url(../block/imageDisplay/__zoom/imageDisplay__zoom.css);
+@import url(../block/imageDisplay/__img/imageDisplay__img.css);
 @import url(../block/cards/__card/__zoom_Display/cards__zoom_Display.css);
 @import url(../block/cards/__card/__zoom_Display/__zoom_close/cards__zoom_close.css);
 @import url(../block/cards/__card/__zoom_Display/__zoom/cards__zoom.css);
