@@ -11,10 +11,10 @@
 @import url(../block/profile/__info/__explorer/profile__explorer.css);
 @import url(../block/profile/__addButon/profile__addButon.css);
 @import url(../block/cards/cards.css);
-@import url(../block/cards/__card/__zoom-Display/cards__zoom-Display.css);
-@import url(../block/cards/__card/__zoom-Display/__zoom-close/cards__zoom-close.css);
-@import url(../block/cards/__card/__zoom-Display/__zoom/cards__zoom.css);
-@import url(../block/cards/__card/__zoom-Display/_zoom-img/cards__zoom-img.css);
+@import url(../block/cards/__card/__zoom_Display/cards__zoom_Display.css);
+@import url(../block/cards/__card/__zoom_Display/__zoom_close/cards__zoom_close.css);
+@import url(../block/cards/__card/__zoom_Display/__zoom/cards__zoom.css);
+@import url(../block/cards/__card/__zoom_Display/_zoom_img/cards__zoom_img.css);
 @import url(../block/cards/__card/cards__card.css);
 @import url(../block/cards/__card/__card-img/cards__card-img.css);
 @import url(../block/cards/__card/__card-lixeira/cards__card-lixeira.css);
