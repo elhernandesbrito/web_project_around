@@ -13,7 +13,6 @@ const header = document.querySelector('.header');
 
 const AllImages = document.querySelector('.rechardCards');
 
-
 const addCards = document.querySelector('.profile__addButton-cards');
 
 const popupCards = document.querySelector('.popupCards');
@@ -104,8 +103,6 @@ const initialCards = [
         let imgElement = document.createElement("img");
         imgElement.src = cardImage.src;
         ImgZoom.src = imgElement.src;
-       
-        ImgZoom.append(ImgZoom);
     }
 
     function CardsZoomDisplayToNone () {
@@ -114,8 +111,6 @@ const initialCards = [
 
    return CardItem
   }
-
-  
 
   for (const initialCard of initialCards) {
     const card = createCard(initialCard)

@@ -1,8 +1,18 @@
-.cards__zoom {
-    display: flex;
-    margin-top: 100px;
-    width: 816px;
-    height: 540px;
-    position:fixed;
-    align-content: center;
+    .cards__zoom {
+        display: flex;
+        margin-top: 100px;
+        width: 816px;
+        height: 540px;
+        position:fixed;
+        align-content: center;
+    }
+
+@media screen and (max-width:320px) and  (max-height:2814px) {
+    
+    .cards__zoom {
+        margin-top: 136px;
+        width: 240px;
+        height: 299px;
+        align-content: none;
+    }
 }
