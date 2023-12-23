@@ -1,3 +1,15 @@
+@keyframes fade_in_show {
+    0% {
+         opacity: 0;
+         transform: scale(0)
+    }
+  
+    100% {
+         opacity: 1;
+         transform: scale(1)
+    }
+  }
+
 .popupCards {
     display:none;
     width:100%;
@@ -6,6 +18,7 @@
     z-index:9999;
     position:fixed;
     top:0;
+    animation: fade_in_show 0.8s
   }
   
   .popupCards_change_display{

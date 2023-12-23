@@ -1,36 +1,35 @@
-const editarPerfil = document.querySelector('.profile__edit');
-
+const editProfile = document.querySelector('.profile__edit');
 const profile = document.querySelector('.profile');
 const popup = document.querySelector('.popup');
 const closeButton = document.querySelector('.popup__closeButton');
-const submitSave = document.querySelector('.popup__submit-save');
+
 const popupForm = document.querySelector('.popup__form');
+const submitSave = popupForm.querySelector('.popup__submit-save');
 const inputName = popupForm.querySelector('.popup__form-name');
 const inputExplorar = popupForm.querySelector('.popup__form-Explorar');
 const profileName = document.querySelector('.profile__name');
 const profileExplorer = document.querySelector('.profile__explorer');
 const header = document.querySelector('.header');
+const allImages = document.querySelector('.rechardCards');
+const addCards = document.querySelector('.profile__addButton');
 
-const AllImages = document.querySelector('.rechardCards');
-
-const addCards = document.querySelector('.profile__addButton-cards');
 
 const popupCards = document.querySelector('.popupCards');
 const popupCards__closeButton = popupCards.querySelector('.popupCards__closeButton');
 const popupCardsForm = popupCards.querySelector('.popupCards__form');
 const cardPopupTitle = popupCardsForm.querySelector('.popupCards__form-name');
 const cardPopupLink = popupCardsForm.querySelector('.popupCards__form-Link');
-const popupCards__save = popupCardsForm.querySelector('.popupCards__submit-save');
+const popupCardSave = popupCardsForm.querySelector('.popupCards__submit-save');
 const cardZoom = document.querySelector('.imageDisplay');
-const CloseZoon = document.querySelector('.imageDisplay__close');
+const closeZoon = document.querySelector('.imageDisplay__close');
 const ImgZoom = cardZoom.querySelector('.imageDisplay__img');
 
-editarPerfil.addEventListener('click', toggleFormDisplay)
+editProfile.addEventListener('click', toggleFormDisplay)
 closeButton.addEventListener('click', changeDisplayToNone )
-submitSave.addEventListener('click', handleProfileFormSubmit)
+submitSave.addEventListener('submit', handleProfileFormSubmit)
 
 function toggleFormDisplay() {
-   popup.classList.toggle('popup_change_display')
+   popup.classList.toggle('popup_change_display');
 }
 
 function changeDisplayToNone() {
@@ -41,8 +40,6 @@ function handleProfileFormSubmit(event) {
    event.preventDefault();
    profileName.textContent =  inputName.value;
    profileExplorer.textContent = inputExplorar.value;
-   inputName.value = '';
-   inputExplorar.value = '';
    changeDisplayToNone();
 }
 
@@ -78,24 +75,18 @@ const initialCards = [
     const CardItem = cardTemplate.querySelector('.cards__card').cloneNode(true)
     const cardImage = CardItem.querySelector('.cards__card-img');
     const cardLixeira = CardItem.querySelector('.cards__card-lixeira')
-    const cardInteration = CardItem.querySelector('.cards__card_interation')
-    const cardName = CardItem.querySelector('.cards__card-name');
     const like = CardItem.querySelector('.cards__cardLike')
 
     CardItem.querySelector('.cards__card-img').setAttribute('src', card.url);
     CardItem.querySelector('.cards__card-img').setAttribute('alt', card.name);
     CardItem.querySelector('.cards__card-name').textContent = card.name;
 
-    cardLixeira.addEventListener('click', (event) => {
-      event.target.parentElement.remove()
-    })
-    
     like.addEventListener('click', function(event) {
       event.target.classList.toggle('cards__cardLike_active');
     })
   
     cardImage.addEventListener('click', toggleCardsZoomDisplay)
-    CloseZoon.addEventListener('click',CardsZoomDisplayToNone )
+    closeZoon.addEventListener('click',CardsZoomDisplayToNone )
 
     function toggleCardsZoomDisplay() {
       cardZoom.classList.toggle('imageDisplay_change_display');
@@ -109,17 +100,21 @@ const initialCards = [
       cardZoom.classList.remove('imageDisplay_change_display')
     }
 
-   return CardItem
+    cardLixeira.addEventListener('click', (event) => {
+      event.target.parentElement.remove()
+    })
+
+    return CardItem
   }
 
   for (const initialCard of initialCards) {
     const card = createCard(initialCard)
-    AllImages.append(card)
+    allImages.append(card)
   }
 
   addCards.addEventListener('click', toggleCardsDisplay)
   popupCards__closeButton.addEventListener('click', changeCardsToNone)
-  popupCards__save.addEventListener('click', insertCards)
+  popupCardSave.addEventListener('click', insertCards)
 
   function toggleCardsDisplay() {
     popupCards.classList.toggle('popupCards_change_display')
@@ -138,9 +133,8 @@ const initialCards = [
     const card = createCard({
       name: cardPopupTitle.value,
       url: cardPopupLink.value,
-      
     })
-    AllImages.prepend(card)
+    allImages.prepend(card)
 }
 
     function insertCards(event){
@@ -150,21 +144,4 @@ const initialCards = [
     cardPopupLink.value = '';
     changeCardsToNone();
   }
-
-
-  
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
 
