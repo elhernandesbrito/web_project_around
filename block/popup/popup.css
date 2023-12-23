@@ -18,7 +18,7 @@
     position:fixed;
     top:0;
     background-color:rgba(0, 0, 0, 0.7);
-    animation: fade_in_show 0.8s
+    animation: fade_in_show 0.8s;
        
 } 
   .popup_change_display{
