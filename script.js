@@ -22,11 +22,11 @@ const cardPopupLink = popupCardsForm.querySelector('.popupCards__form-Link');
 const popupCardSave = popupCardsForm.querySelector('.popupCards__submit-save');
 const cardZoom = document.querySelector('.imageDisplay');
 const closeZoon = document.querySelector('.imageDisplay__close');
-const ImgZoom = cardZoom.querySelector('.imageDisplay__img');
+const imgZoom = cardZoom.querySelector('.imageDisplay__img');
 
 editProfile.addEventListener('click', toggleFormDisplay)
 closeButton.addEventListener('click', changeDisplayToNone )
-submitSave.addEventListener('submit', handleProfileFormSubmit)
+popupForm.addEventListener('submit', handleProfileFormSubmit)
 
 function toggleFormDisplay() {
    popup.classList.toggle('popup_change_display');
@@ -72,14 +72,14 @@ const initialCards = [
 
   function createCard(card) {
     const cardTemplate = document.querySelector('#cards').content
-    const CardItem = cardTemplate.querySelector('.cards__card').cloneNode(true)
-    const cardImage = CardItem.querySelector('.cards__card-img');
-    const cardLixeira = CardItem.querySelector('.cards__card-lixeira')
-    const like = CardItem.querySelector('.cards__cardLike')
+    const cardItem = cardTemplate.querySelector('.cards__card').cloneNode(true)
+    const cardImage = cardItem.querySelector('.cards__card-img');
+    const cardLixeira = cardItem.querySelector('.cards__card-lixeira')
+    const like = cardItem.querySelector('.cards__cardLike')
 
-    CardItem.querySelector('.cards__card-img').setAttribute('src', card.url);
-    CardItem.querySelector('.cards__card-img').setAttribute('alt', card.name);
-    CardItem.querySelector('.cards__card-name').textContent = card.name;
+    cardItem.querySelector('.cards__card-img').setAttribute('src', card.url);
+    cardItem.querySelector('.cards__card-img').setAttribute('alt', card.name);
+    cardItem.querySelector('.cards__card-name').textContent = card.name;
 
     like.addEventListener('click', function(event) {
       event.target.classList.toggle('cards__cardLike_active');
@@ -93,7 +93,7 @@ const initialCards = [
 
         let imgElement = document.createElement("img");
         imgElement.src = cardImage.src;
-        ImgZoom.src = imgElement.src;
+        imgZoom.src = imgElement.src;
     }
 
     function CardsZoomDisplayToNone () {
@@ -104,7 +104,7 @@ const initialCards = [
       event.target.parentElement.remove()
     })
 
-    return CardItem
+    return cardItem
   }
 
   for (const initialCard of initialCards) {
@@ -114,7 +114,7 @@ const initialCards = [
 
   addCards.addEventListener('click', toggleCardsDisplay)
   popupCards__closeButton.addEventListener('click', changeCardsToNone)
-  popupCardSave.addEventListener('click', insertCards)
+  popupCardsForm.addEventListener("submit", insertCards)
 
   function toggleCardsDisplay() {
     popupCards.classList.toggle('popupCards_change_display')
@@ -125,10 +125,7 @@ const initialCards = [
   }
 
   function addNewCard() {
-    if(cardPopupTitle.value == '' || cardPopupLink.value == '' ) {
-      alert('Preencha corretamente')
-      return
-    }
+   
 
     const card = createCard({
       name: cardPopupTitle.value,
