@@ -1,12 +1,20 @@
+
+
+
+
+
+
 const editProfile = document.querySelector('.profile__edit');
 const profile = document.querySelector('.profile');
 const popup = document.querySelector('.popup');
 const closeButton = document.querySelector('.popup__closeButton');
 
-const popupForm = document.querySelector('.popup__form');
-const submitSave = popupForm.querySelector('.popup__submit-save');
-const inputName = popupForm.querySelector('.popup__form-name');
-const inputExplorar = popupForm.querySelector('.popup__form-Explorar');
+/*const popupForm = document.querySelector('.popup__form');*/
+const formElement = document.querySelector('.form');
+
+const submitSave = document.querySelector('.popup__submit-save');
+const inputName = formElement.querySelector('.popup__form-name');
+const inputExplorar = formElement.querySelector('.popup__form-Explorar');
 const profileName = document.querySelector('.profile__name');
 const profileExplorer = document.querySelector('.profile__explorer');
 const header = document.querySelector('.header');
@@ -26,10 +34,11 @@ const imgZoom = cardZoom.querySelector('.imageDisplay__img');
 
 editProfile.addEventListener('click', toggleFormDisplay)
 closeButton.addEventListener('click', changeDisplayToNone )
-popupForm.addEventListener('submit', handleProfileFormSubmit)
+formElement.addEventListener('submit', handleProfileFormSubmit)
 
 function toggleFormDisplay() {
    popup.classList.toggle('popup_change_display');
+   
 }
 
 function changeDisplayToNone() {
@@ -42,6 +51,7 @@ function handleProfileFormSubmit(event) {
    profileExplorer.textContent = inputExplorar.value;
    changeDisplayToNone();
 }
+
 
 const initialCards = [
   {

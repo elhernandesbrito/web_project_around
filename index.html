@@ -46,20 +46,37 @@
 
             <section class="popup">
                 <img src="images/CloseIcon.png" alt ="image Icon Close" class="popup__closeButton">
-                <form class="popup__form" name="register">
+
+                <form class="popup__form form" name="register" novalidate>
                     <h3 class="popup__EditarPerfil">Editar perfil</h3>
-                    <input type="text" name="name" required value="Jacques Custeau" placeholder="Nome" class="popup__form-name">
-                    <input type="text" name="explorar" required value="Explorar" placeholder="Sobre mim" class="popup__form-Explorar">
-                    <input type="submit" name="enviar" value="Salvar" class="popup__submit-save">
+
+                   <div class="popup__form-input"> 
+                        <input id="form-input" class="popup__form-name name-input" type="text" placeholder="Nome" name="name" value=""minlength="2"maxlength="40" required> 
+                        <span class="form-input-error input__name-message popup__form-name-error"></span>
+                   </div>
+
+                    <div class="popup__form-input">                    
+                        <input id="form-input"  class="popup__form-Explorar name-input" type="text" placeholder="Sobre mim" name="explorar" value=""minlength="2"maxlength="200" required>
+                        <span class= "form-input-error input__explorar-message popup__form-Explorar-error"></span>
+                    </div>
+
+                    <button type="submit"name="enviar"value="Salvar"class="popup__submit-save">SALVAR</button>
                 </form>
+
             </section>
 
             <section class="popupCards">
                 <img src="images/CloseIcon.png" alt ="image Icon Close" class="popupCards__closeButton">
-                <form class="popupCards__form" name="register">
+
+                <form class="popupCards__form form" name="register" novalidate>
                     <h3 class="popupCards__EditarPerfil">Novo Local</h3>
-                    <input type="text" name="name" value="" placeholder="Nome" class="popupCards__form-name" required>
-                    <input type="url" name="link" value="" placeholder="Link da imagem" class="popupCards__form-Link" required>
+                  
+                    <input id="card-input" class="popupCards__form-name" type="text" name="name" value="" placeholder="Nome" value=""minlength="2"maxlength="40" required>
+                    <span class="card-input-error popupCards__form-name-error"></span>
+
+                    <input id="card-input" class="popupCards__form-Link" type="url" name="link" value="" placeholder="Link da imagem" required>
+                    <span class="card-input-error popupCards__form-Link-error"></span>
+
                     <button type="submit" class="popupCards__submit-save">Criar</button>
                 </form>
             </section>
@@ -76,7 +93,9 @@
                 <p class="copyright">© 2021 Around The U.S.</p>
             </footer>
         
-            <script src="script.js"></script> 
+            <script src="script.js"></script>
+            <script src="validate.js"></script> 
+
        
     </body>
 </html>
