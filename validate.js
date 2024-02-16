@@ -59,13 +59,11 @@ const isValid = (formElement, inputElement) => {
     });
   };
  
-
   enableValidation({
       formElement: ".form",
       inputElement: ".name-input",
       submitSave: ".popup__submit-save",
       inactiveButtonClass: ".popup__submit-save_inactive",
       errorElement: ".form-input-error",
-      /*errorClass: "popup__error_visible"*/
   })
   
