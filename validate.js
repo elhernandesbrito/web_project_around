@@ -1,27 +1,25 @@
 
-/*const inputElement = document.querySelector('.name-input')*/
-
-const showInputErrorProfile = (document, inputElement, errorMessage) => {
-  const errorElement = document.querySelector(`.${inputElement.id}-error`);
-    inputElement.classList.add("form-input_type_error");
-    errorElement.textContent = errorMessage;
-    errorElement.classList.add("form-input-error_active");
+const showInputErrorProfile = (formElement, inputElement, errorMessage) => {
+  const errorElement = formElement.querySelector(`.input__${inputElement.name}-message`);
+  inputElement.classList.add("form-input_type_error");
+  errorElement.textContent = errorMessage;
+  errorElement.classList.add("form-input-error_active");
 };
 
-const hideInputErrorProfile = (document, inputElement) => {
-  const errorElement = document.querySelector(`.${inputElement.id}-error`);
-    inputElement.classList.remove('form-input_type_error');
-    errorElement.classList.remove("form-input-error_active");
-    errorElement.textContent = "";
-}; 
+const hideInputErrorProfile = (formElement, inputElement) => {
+  const errorElement = formElement.querySelector(`.input__${inputElement.name}-message`);
+  inputElement.classList.remove('form-input_type_error');
+  errorElement.classList.remove("form-input-error_active");
+  errorElement.textContent = "";
+};
 
 const isValid = (formElement, inputElement) => {
   if (!inputElement.validity.valid) {
       showInputErrorProfile(formElement, inputElement, inputElement.validationMessage);
   } else {
       hideInputErrorProfile(formElement, inputElement);
-  };
-}; 
+  }
+};
 
   const setEventListeners = (formElement) => {
   
@@ -60,10 +58,9 @@ const isValid = (formElement, inputElement) => {
         setEventListeners(formElement);
     });
   };
-  enableValidation(); 
+ 
 
   enableValidation({
-     
       formElement: ".form",
       inputElement: ".name-input",
       submitSave: ".popup__submit-save",

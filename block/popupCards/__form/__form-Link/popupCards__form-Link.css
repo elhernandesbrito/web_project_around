@@ -1,4 +1,4 @@
-.popupCards__form-Link {
+.popupCards__form-link {
     margin-top:20px;
     width:358px;
     height:27px;
@@ -9,24 +9,31 @@
     border-bottom:1px solid #000000;
     margin-left:36px;
     color:#000000;
+    margin-bottom: 0;
 }
 
-.popupCards__form-Link:valid {
+.popupCards__form-link:valid {
     border-bottom: 1px solid green;
 }
 
-.card-input-error {
+.form-input_type_error {
+    border-bottom:1px solid red;
+}
+
+.form-input-error{
     font-size: 10px;
     color: red;
     margin-left: 40px;
     font-size: 12px;
     font-weight: 400px;
     line-height: 14.52px;
+    display: flex;
+    position: fixed;
 }
 
 @media screen and (max-width:320px) and  (max-height:2814px) {
 
-    .popupCards__form-Link {
+    .popupCards__form-link {
         margin-top:30px;
         width:238px;
         height:26px;

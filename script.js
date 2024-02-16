@@ -1,15 +1,8 @@
-
-
-
-
-
-
 const editProfile = document.querySelector('.profile__edit');
 const profile = document.querySelector('.profile');
 const popup = document.querySelector('.popup');
 const closeButton = document.querySelector('.popup__closeButton');
 
-/*const popupForm = document.querySelector('.popup__form');*/
 const formElement = document.querySelector('.form');
 
 const submitSave = document.querySelector('.popup__submit-save');
@@ -26,7 +19,7 @@ const popupCards = document.querySelector('.popupCards');
 const popupCards__closeButton = popupCards.querySelector('.popupCards__closeButton');
 const popupCardsForm = popupCards.querySelector('.popupCards__form');
 const cardPopupTitle = popupCardsForm.querySelector('.popupCards__form-name');
-const cardPopupLink = popupCardsForm.querySelector('.popupCards__form-Link');
+const cardPopupLink = popupCardsForm.querySelector('.popupCards__form-link');
 const popupCardSave = popupCardsForm.querySelector('.popupCards__submit-save');
 const cardZoom = document.querySelector('.imageDisplay');
 const closeZoon = document.querySelector('.imageDisplay__close');
@@ -36,13 +29,22 @@ editProfile.addEventListener('click', toggleFormDisplay)
 closeButton.addEventListener('click', changeDisplayToNone )
 formElement.addEventListener('submit', handleProfileFormSubmit)
 
+function EscapeKey(event) {
+  if (event.key === 'Escape') {
+    console.log('apertou')
+    changeDisplayToNone()
+    changeCardsToNone()
+  }
+}
+
 function toggleFormDisplay() {
    popup.classList.toggle('popup_change_display');
-   
+   document.addEventListener('keypress', EscapeKey)   
 }
 
 function changeDisplayToNone() {
    popup.classList.remove('popup_change_display')
+   document.removeEventListener('keypress', EscapeKey)
 }
 
 function handleProfileFormSubmit(event) {
@@ -128,10 +130,13 @@ const initialCards = [
 
   function toggleCardsDisplay() {
     popupCards.classList.toggle('popupCards_change_display')
+    document.addEventListener('keypress', EscapeKey)
   }
 
   function changeCardsToNone() {
     popupCards.classList.remove('popupCards_change_display')
+    document.removeEventListener('keypress', EscapeKey)
+
   }
 
   function addNewCard() {
