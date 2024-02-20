@@ -22,14 +22,14 @@ const isValid = (formElement, inputElement) => {
 };
 
   const setEventListeners = (formElement) => {
-  
-    const inputList = Array.from(formElement.querySelectorAll(".name-input"));
-     toggleButtonState(inputList, submitSave);
+     const inputList = Array.from(formElement.querySelectorAll(".name-input"));
+   /*  toggleButtonState(inputList, submitSave);/*testar*/
 
          inputList.forEach((inputElement) => {
         inputElement.addEventListener("input", function () {
         isValid(formElement, inputElement);
-        toggleButtonState(inputList, submitSave);
+        toggleButtonStateProfile(inputList, savePopup);
+        toggleButtonStateCards(inputList, popupCardSave);  
       });
     });
   }; 
@@ -40,14 +40,27 @@ const isValid = (formElement, inputElement) => {
     });
   };
 
-  const toggleButtonState = (inputList, submitSave) => {
-     (hasInvalidInput(inputList));
+  const toggleButtonStateProfile = (inputList, savePopup) => {
+   /*  (hasInvalidInput(inputList));*/
     if(hasInvalidInput(inputList)) {
-      submitSave.classList.add('popup__submit-save_inactive');
+      savePopup.classList.add('popup__submit-save_inactive');
+      
     }else {
-      submitSave.classList.remove('popup__submit-save_inactive');
+      savePopup.classList.remove('popup__submit-save_inactive');
+      
     }
   };
+
+  const toggleButtonStateCards = (inputList, popupCardSave) => {
+    /*  (hasInvalidInput(inputList));*/
+     if(hasInvalidInput(inputList)) {
+      popupCardSave.classList.add('popupCards__submit-save_inactive');
+       
+     }else {
+      popupCardSave.classList.remove('popupCards__submit-save_inactive');
+       
+     }
+   };
 
   const enableValidation = () => {
      const formList = Array.from(document.querySelectorAll(".form"));
@@ -59,11 +72,15 @@ const isValid = (formElement, inputElement) => {
     });
   };
  
+
   enableValidation({
       formElement: ".form",
       inputElement: ".name-input",
-      submitSave: ".popup__submit-save",
+      savePopup: ".popup__submit-save",
       inactiveButtonClass: ".popup__submit-save_inactive",
-      errorElement: ".form-input-error",
-  })
+      popupCardSave:".popupCards__submit-save",
+      inactiveButtonClassCard:".popupCards__submit-save_inactive",
+      errorElement: ".form-input-error"
+      /*errorClass: "popup__error_visible"*/
+  }) 
   

@@ -5,7 +5,8 @@ const closeButton = document.querySelector('.popup__closeButton');
 
 const formElement = document.querySelector('.form');
 
-const submitSave = document.querySelector('.popup__submit-save');
+const savePopup = document.querySelector('.popup__submit-save');
+/*const submitSave = document.querySelector('.saveButton')*/
 const inputName = formElement.querySelector('.popup__form-name');
 const inputExplorar = formElement.querySelector('.popup__form-Explorar');
 const profileName = document.querySelector('.profile__name');
