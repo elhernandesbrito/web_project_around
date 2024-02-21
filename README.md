@@ -33,6 +33,7 @@ Também foi atribuído a função de alteração do estado do botão enviar - fu
 
 Para uma melhor interação com o usuário, foi inserido a função Escapekey, que após aberto o formulário e havendo a digitação da tecla "escape", o mesmo é fechado.
 
+Quando um dos formulários é aberto, ele também poderá ser fechado apenas com o click do mouse, se for identificado fora dos campos do 'input'.
 
 Para a criação da página e execução da funções foram utilizadas os metodos: createElement, metodos de acionar como append e prepend;
 Metodos de clonar elemento: cloneNode();

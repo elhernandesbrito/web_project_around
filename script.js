@@ -24,14 +24,16 @@ const popupCardSave = popupCardsForm.querySelector('.popupCards__submit-save');
 const cardZoom = document.querySelector('.imageDisplay');
 const closeZoon = document.querySelector('.imageDisplay__close');
 const imgZoom = cardZoom.querySelector('.imageDisplay__img');
+const formPopup = popup.querySelector('.popup__form-input')
+
 
 editProfile.addEventListener('click', toggleFormDisplay)
 closeButton.addEventListener('click', changeDisplayToNone )
 formElement.addEventListener('submit', handleProfileFormSubmit)
 
+
 function EscapeKey(event) {
   if (event.key === 'Escape') {
-    console.log('apertou')
     changeDisplayToNone()
     changeCardsToNone()
   }
@@ -40,6 +42,11 @@ function EscapeKey(event) {
 function toggleFormDisplay() {
    popup.classList.toggle('popup_change_display');
    document.addEventListener('keypress', EscapeKey)   
+   popup.addEventListener('click', function(e) {
+    if(e.target !== inputName && e.target !== inputExplorar){
+      popup.style.display = 'none';
+    }
+   })
 }
 
 function changeDisplayToNone() {
@@ -53,7 +60,6 @@ function handleProfileFormSubmit(event) {
    profileExplorer.textContent = inputExplorar.value;
    changeDisplayToNone();
 }
-
 
 const initialCards = [
   {
@@ -115,6 +121,7 @@ const initialCards = [
     cardLixeira.addEventListener('click', (event) => {
       event.target.parentElement.remove()
     })
+
     return cardItem
   }
 
@@ -130,15 +137,23 @@ const initialCards = [
   function toggleCardsDisplay() {
     popupCards.classList.toggle('popupCards_change_display')
     document.addEventListener('keypress', EscapeKey)
+    popupCards.addEventListener('click', function(e) {
+      if(e.target !== cardPopupTitle && e.target !== cardPopupLink){
+        popupCards.style.display = 'none';
+      }
+     })
   }
 
   function changeCardsToNone() {
     popupCards.classList.remove('popupCards_change_display')
     document.removeEventListener('keypress', EscapeKey)
+
   }
 
   function addNewCard() {
-       const card = createCard({
+   
+
+    const card = createCard({
       name: cardPopupTitle.value,
       url: cardPopupLink.value,
     })
