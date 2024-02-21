@@ -6,7 +6,6 @@ const closeButton = document.querySelector('.popup__closeButton');
 const formElement = document.querySelector('.form');
 
 const savePopup = document.querySelector('.popup__submit-save');
-/*const submitSave = document.querySelector('.saveButton')*/
 const inputName = formElement.querySelector('.popup__form-name');
 const inputExplorar = formElement.querySelector('.popup__form-Explorar');
 const profileName = document.querySelector('.profile__name');
@@ -116,7 +115,6 @@ const initialCards = [
     cardLixeira.addEventListener('click', (event) => {
       event.target.parentElement.remove()
     })
-
     return cardItem
   }
 
@@ -137,13 +135,10 @@ const initialCards = [
   function changeCardsToNone() {
     popupCards.classList.remove('popupCards_change_display')
     document.removeEventListener('keypress', EscapeKey)
-
   }
 
   function addNewCard() {
-   
-
-    const card = createCard({
+       const card = createCard({
       name: cardPopupTitle.value,
       url: cardPopupLink.value,
     })

@@ -23,9 +23,7 @@ const isValid = (formElement, inputElement) => {
 
   const setEventListeners = (formElement) => {
      const inputList = Array.from(formElement.querySelectorAll(".name-input"));
-   /*  toggleButtonState(inputList, submitSave);/*testar*/
-
-         inputList.forEach((inputElement) => {
+           inputList.forEach((inputElement) => {
         inputElement.addEventListener("input", function () {
         isValid(formElement, inputElement);
         toggleButtonStateProfile(inputList, savePopup);
@@ -41,8 +39,7 @@ const isValid = (formElement, inputElement) => {
   };
 
   const toggleButtonStateProfile = (inputList, savePopup) => {
-   /*  (hasInvalidInput(inputList));*/
-    if(hasInvalidInput(inputList)) {
+      if(hasInvalidInput(inputList)) {
       savePopup.classList.add('popup__submit-save_inactive');
       
     }else {
@@ -52,14 +49,12 @@ const isValid = (formElement, inputElement) => {
   };
 
   const toggleButtonStateCards = (inputList, popupCardSave) => {
-    /*  (hasInvalidInput(inputList));*/
-     if(hasInvalidInput(inputList)) {
+        if(hasInvalidInput(inputList)) {
       popupCardSave.classList.add('popupCards__submit-save_inactive');
        
      }else {
       popupCardSave.classList.remove('popupCards__submit-save_inactive');
-       
-     }
+      }
    };
 
   const enableValidation = () => {
@@ -72,8 +67,7 @@ const isValid = (formElement, inputElement) => {
     });
   };
  
-
-  enableValidation({
+   enableValidation({
       formElement: ".form",
       inputElement: ".name-input",
       savePopup: ".popup__submit-save",
@@ -81,6 +75,5 @@ const isValid = (formElement, inputElement) => {
       popupCardSave:".popupCards__submit-save",
       inactiveButtonClassCard:".popupCards__submit-save_inactive",
       errorElement: ".form-input-error"
-      /*errorClass: "popup__error_visible"*/
-  }) 
+    }) 
   
