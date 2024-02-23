@@ -20,14 +20,14 @@
 }
 
 .form-input-error{
-    font-size: 10px;
-    color: red;
-    margin-left: 40px;
-    font-size: 12px;
-    font-weight: 400px;
-    line-height: 14.52px;
-    display: flex;
-    position: fixed;
+    font-size:10px;
+    color:red;
+    margin-left:40px;
+    font-size:12px;
+    font-weight:400px;
+    line-height:14.52px;
+    display:flex;
+    position:fixed;
 }
 
 @media screen and (max-width:320px) and  (max-height:2814px) {

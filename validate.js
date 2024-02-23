@@ -41,8 +41,7 @@ const isValid = (formElement, inputElement) => {
   };
 
   const toggleButtonStateProfile = (inputList, savePopup) => {
-   /*  (hasInvalidInput(inputList));*/
-    if(hasInvalidInput(inputList)) {
+      if(hasInvalidInput(inputList)) {
       savePopup.classList.add('popup__submit-save_inactive');
       
     }else {
@@ -52,8 +51,7 @@ const isValid = (formElement, inputElement) => {
   };
 
   const toggleButtonStateCards = (inputList, popupCardSave) => {
-    /*  (hasInvalidInput(inputList));*/
-     if(hasInvalidInput(inputList)) {
+         if(hasInvalidInput(inputList)) {
       popupCardSave.classList.add('popupCards__submit-save_inactive');
        
      }else {
@@ -81,6 +79,6 @@ const isValid = (formElement, inputElement) => {
       popupCardSave:".popupCards__submit-save",
       inactiveButtonClassCard:".popupCards__submit-save_inactive",
       errorElement: ".form-input-error"
-      /*errorClass: "popup__error_visible"*/
+   
   }) 
   
