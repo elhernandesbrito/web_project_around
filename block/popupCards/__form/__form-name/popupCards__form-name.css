@@ -12,14 +12,14 @@
 }
 
 .popupCards__form-name:valid {
-    border-bottom: 1px solid green;
+    border-bottom:1px solid green;
 }
 
 .form-input_type_error {
     border-bottom:1px solid red;
 }
 
-.form-input-error{
+.form-input-error {
     font-size:10px;
     color:red;
     margin-left:40px;
