@@ -1,6 +1,5 @@
 
 const showInputErrorProfile = (formElement, inputElement, errorMessage) => {
-/*  const errorElement = formElement.querySelector(`.input__${inputElement.name}-message`);*/
 const errorElement = formElement.querySelector(`.form__input-${inputElement.name}`);
   inputElement.classList.add("form-input_type_error");
   errorElement.textContent = errorMessage;
@@ -8,7 +7,6 @@ const errorElement = formElement.querySelector(`.form__input-${inputElement.name
 };
 
 const hideInputErrorProfile = (formElement, inputElement) => {
-/*  const errorElement = formElement.querySelector(`.input__${inputElement.name}-message`);*/
 const errorElement = formElement.querySelector(`.form__input-${inputElement.name}`);
 
   inputElement.classList.remove('form-input_type_error');

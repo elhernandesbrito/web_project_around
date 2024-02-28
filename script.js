@@ -24,7 +24,7 @@ const popupCardSave = popupCardsForm.querySelector('.popupCards__submit-save');
 const cardZoom = document.querySelector('.imageDisplay');
 const closeZoon = document.querySelector('.imageDisplay__close');
 const imgZoom = cardZoom.querySelector('.imageDisplay__img');
-const formPopup = popup.querySelector('.popup__form-input')
+const formPopup = popup.querySelector('.popup__form')
 
 
 editProfile.addEventListener('click', toggleFormDisplay)
@@ -41,9 +41,10 @@ function EscapeKey(event) {
 
 function toggleFormDisplay() {
    popup.classList.toggle('popup_change_display');
+   savePopup.classList.add('popup__submit-save_inactive')
    document.addEventListener('keypress', EscapeKey)   
    popup.addEventListener('click', function(e) {
-    if(e.target !== inputName && e.target !== inputExplorar){
+    if(e.target === popup){
       popup.style.display = 'none';
     }
    })
@@ -108,7 +109,6 @@ const initialCards = [
 
     function toggleCardsZoomDisplay() {
       cardZoom.classList.toggle('imageDisplay_change_display');
-
         let imgElement = document.createElement("img");
         imgElement.src = cardImage.src;
         imgZoom.src = imgElement.src;
@@ -136,9 +136,10 @@ const initialCards = [
 
   function toggleCardsDisplay() {
     popupCards.classList.toggle('popupCards_change_display')
+    popupCardSave.classList.add('popupCards__submit-save_inactive')
     document.addEventListener('keypress', EscapeKey)
     popupCards.addEventListener('click', function(e) {
-      if(e.target !== cardPopupTitle && e.target !== cardPopupLink){
+      if(e.target === popupCards){
         popupCards.style.display = 'none';
       }
      })
