@@ -16,8 +16,8 @@
 }
 
 .popup__submit-save_inactive {
-    color: #B8B8B8;
-    background: #EDEDED;
+    color: #FFFFFF;
+    background: #00000010;
     pointer-events: none;
     user-select: none;
 }

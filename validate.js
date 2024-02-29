@@ -24,8 +24,6 @@ const isValid = (formElement, inputElement) => {
 
   const setEventListeners = (formElement) => {
      const inputList = Array.from(formElement.querySelectorAll(".name-input"));
-   /*  toggleButtonState(inputList, submitSave);/*testar*/
-
          inputList.forEach((inputElement) => {
         inputElement.addEventListener("input", function () {
         isValid(formElement, inputElement);
@@ -80,6 +78,5 @@ const isValid = (formElement, inputElement) => {
       popupCardSave:".popupCards__submit-save",
       inactiveButtonClassCard:".popupCards__submit-save_inactive",
       errorElement: ".form-input-error"
-   
   }) 
   
