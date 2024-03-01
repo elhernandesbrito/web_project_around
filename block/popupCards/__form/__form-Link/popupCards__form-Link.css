@@ -11,10 +11,6 @@
     color:#000000;
     margin-bottom: 0;
 }
-    #form-input {
-    color:#000000;
-}
-
 .popupCards__form-link:valid {
     border-bottom: 1px solid green;
     color:#000000;

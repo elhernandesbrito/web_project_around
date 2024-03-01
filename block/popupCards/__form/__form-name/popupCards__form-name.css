@@ -12,10 +12,6 @@
     align-items: center;
 }
 
-#form-input {
-    color:#000000;
-}
-
 .popupCards__form-name:valid {
     border-bottom:1px solid green;
     color:#000000;
