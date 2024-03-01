@@ -10,20 +10,40 @@
     border-bottom:1px solid #00000033;
     color:#000000;
     align-items: center;
-    
+}
+
+#form-input {
+    color:#000000;
 }
 
 .popupCards__form-name:valid {
     border-bottom:1px solid green;
+    color:#000000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-bottom: 2.7px;
 }
 
 .form-input_type_error {
     border-bottom:1px solid red;
+    width:358px;
+    color:#000000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-bottom: 2.7px;
 }
 
 .form-input-error {
-    font-size:10px;
-    color:red;
+    font-size:12px;
+    width:358px;
+    margin-top: 5px;
+    color:#FF0000;
     margin-left:40px;
     font-weight:400px;
     line-height:14.52px;
