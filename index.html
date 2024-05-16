@@ -51,12 +51,29 @@
                     <h3 class="popup__EditarPerfil">Editar perfil</h3>
 
                    <div class="form__input"> 
-                        <input id="form-input" class="popup__form-name name-input" type="text" placeholder="Nome" name="name" value=" " minlength="2" maxlength="40" required> 
+                        <input 
+                        id="form-input" 
+                        class="popup__form-name name-input" 
+                        type="text" placeholder="Nome" 
+                        name="name" 
+                        value="" 
+                        minlength="2" 
+                        maxlength="40" 
+                        required> 
                         <span class="form-input-error form__input-name popup__form-name-error"></span>
                    </div>
 
                     <div class="form__input">                    
-                        <input id="form-input" class="popup__form-Explorar name-input" type="text" placeholder="Sobre mim" name="explorar" value=" " minlength="2" maxlength="200" required>
+                        <input 
+                        id="form-input" 
+                        class="popup__form-Explorar name-input" 
+                        type="text" 
+                        placeholder="Sobre mim" 
+                        name="explorar" 
+                        value="" 
+                        minlength="2" 
+                        maxlength="200" 
+                        required>
                         <span class="form-input-error form__input-explorar popup__form-name-error"></span>
                     </div>
                
@@ -106,7 +123,7 @@
             <section class="imageDisplay">
                 <img src="images/CloseIcon.png" alt ="image Icon Close" class="imageDisplay__close">
                 <div class="imageDisplay__zoom">
-                    <img class= "imageDisplay__img" alt="nul" src="nul">
+                    <img class= "imageDisplay__img" alt=" " src=" ">
                 </div>
             </section>
 
@@ -115,7 +132,9 @@
                 <p class="copyright">© 2021 Around The U.S.</p>
             </footer>
         
-            <script src="script.js"></script>
-            <script src="validate.js"></script> 
+                       <script type="module" src="./scripts/utils.js"></script>
+            <script type="module" src="./scripts/Card.js"></script>
+            <script type="module" src="./scripts/index.js"></script>
+            <script type="module" src="./scripts/FormValidator.js" ></script>
     </body>
 </html>

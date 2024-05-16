@@ -8,6 +8,7 @@
     box-shadow:0px 0px 25px 0px #00000026;
     background-color:#FFFFFF;
     position:fixed;
+    align-items: center;
     max-width:90%;
     color:#000000;
 }

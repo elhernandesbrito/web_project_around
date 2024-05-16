@@ -1,43 +1,33 @@
-Projeto 7 - EUA AFORA
 
-O desgin EUA AFORA é uma pagina interativa, que contém cartões com imagens diversas que indicam o que é a figura.
+Projeto Sprint 8
 
-Nesse sprint, as imagens deixam de ser depositadas na página html e são buscadas por meio de funções no java script.
+A página, design EUA afora, possui dois formulários - popup.
 
-Cada cartão contém uma imagem, a indicação do que se trata, um link para curtir e um link para excluir.
+Um formulário contendo dois campos a serem preenchidos com texto, e o outro com um cartão, contendo o texto e uma url.
 
-A página possui um campo onde o usuário poderá incluir um novo elemento ao grupo dos cartões que estão sendo exibidos.
+Ambos os cartões passam por uma validação que acontece inicialmente no arquivo index.html,com a utilização de um atributo minlength e maxlength.
 
-Cada uma das imagens ao serem selecionadas são destacadas isoladamente por meio de um display.
+Nesse sprint-8, as validações que já eram tratadas em Java Script, são refatoradas para a Linguagem de Programação Objeto - POO.
 
-No desenvolvimento do projeto foi utilizado o html e ferramentas front-end: CSS e back-end: Java-Script (JS).
+Com a refatoração, duas classes/arquivos são criados.
 
-No HTML utilizamos colunas e formulário, displays para demonstração de "pop-up".
+Sendo eles: Card.js e FormValidator.js
 
-Os formulários são interativos.
+A classe Card.js recebe em seu construtor todos os elementos que compoem um cartão, os ouvintes de chamada relacionados a esses elementos e suas funções.
 
-O uso da tecnologia JS permite a captação e alteração dos dados inseridos nos formulários.
+É também nessa classe que é inserido o generateCard(), função responsável por retornar todos os elementos desse cartão.
 
-No Java Script captamos as variaveis HTML através do DOM - Document Object Modal, utilizando o metodo querySelector.
+A outra classe criada é a FormValidator,que recebe como parâmetro todos os formulários contemplados no projeto e os elementos/inputs que devem ser validados.
 
-Os atributos das variáveis foram controlados e alterados por meio dos metodos addAdventListener, classList e  textContent.
+Também é nessa classe encontra-se as funções que adicionam ou retiram as mensagens de erros e validam esses erros. Após a checagem, é chamado a função enableValidation() onde ocorre a etapa final de validação.
 
-Foram criadas funções que permite exibir e esconder o formulário  (popup/modal) ao ser clicado - "quando o evento click é acionado"
+Todas as funções ja criadas anteriormentes sao distribuidas entre os arquivos utils.js e index.js.
 
-Os popup's foram explorados de diversas formas. Para captação e exibição de dados e imagens.
-Também foram criadas funções que inserem e excluem imagens, seleciona (troca/toggle) objetos (como o "curtir"), e permite exibir imagens selecionadas em forma de "zoom".
+Nesse sprint, são explorados os seguintes assuntos:
 
-Nessa etapa do projeto foram inseridos os metodos de validação, que permite capturar os dados inseridos no formulário e validar se os elementos atendendem os critérios. A validação é feita por meio do java script, com a resposta do próprio navegador.
-
-Também foi atribuído a função de alteração do estado do botão enviar - function toggleButtonState que permanece desabilitada até a correta inserção do formulário.
-
-Para uma melhor interação com o usuário, foi inserido a função Escapekey, que após aberto o formulário e havendo a digitação da tecla "escape", o mesmo é fechado.
-
-Quando um dos formulários é aberto, ele também poderá ser fechado apenas com o click do mouse, se for identificado fora dos campos do 'input'.
-
-Para a criação da página e execução da funções foram utilizadas os metodos: createElement, metodos de acionar como append e prepend;
-Metodos de clonar elemento: cloneNode();
-Objeto evento ou evt, como parâmetro de metodo e função.
+Criação de classe e passagem de parâmetros,
+refatoração de funções em POO,
+utilização de objetos para configuração (config)
 
 
 
