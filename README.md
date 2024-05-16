@@ -32,6 +32,3 @@ utilização de objetos para configuração (config)
 
 
 link no github: https://github.com/elhernandesbrito/web_project_around.git
-
-
-
