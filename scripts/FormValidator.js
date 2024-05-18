@@ -12,14 +12,12 @@ export default class FormValidator {
         this._submitCardsInactive = 'popupCards__submit-save_inactive';
     }
  
-
     _showInputError(inputElement, errorMessage) {
         const errorElement = inputElement.parentElement.querySelector('.form-input-error');
         inputElement.classList.add('form-input_type_error');
         errorElement.textContent = errorMessage;
         errorElement.classList.add('form-input-error_active');
     }
-    
 
     _hideInputError(inputElement) {
         const errorElement = inputElement.parentElement.querySelector('.form-input-error');
@@ -27,7 +25,6 @@ export default class FormValidator {
         errorElement.textContent = '';
         errorElement.classList.remove('form-input-error_active');
     }
-
 
     _checkInputValidity(inputElement) {
         if (!inputElement.validity.valid) {
@@ -49,7 +46,6 @@ export default class FormValidator {
         }
     }
 
- 
     _handleInput(event) {
         const inputElement = event.target;
         this._checkInputValidity(inputElement);

@@ -7,13 +7,14 @@ const popupCardsForm = document.querySelector('.popupCards__form');
 const cardZoom = document.querySelector(".imageDisplay");
 const closeZoon = document.querySelector(".imageDisplay__close");
 const imgZoom = cardZoom.querySelector(".imageDisplay__img");
+const imgZoonTitle = cardZoom.querySelector(".imageDisplay__title");
 
-
-export function toggleCardsZoomDisplay(imgElement) {
+export function toggleCardsZoomDisplay(imgElement, cardName) {
   cardZoom.classList.toggle("imageDisplay_change_display");
   imgZoom.src = imgElement;
+  imgZoom.alt = cardName;
+  imgZoonTitle.textContent = cardName;  
 }
-
 
 const initialCards = [
   {

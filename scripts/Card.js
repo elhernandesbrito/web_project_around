@@ -26,7 +26,7 @@
         });
 
         this._cardItem.querySelector('.cards__card-img').addEventListener('click', (event) => {
-            this._toggleCardsZoomDisplay(event.target.src)
+            this._toggleCardsZoomDisplay(event.target.src, this._name);
         });
     }
 
