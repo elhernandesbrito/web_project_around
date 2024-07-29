@@ -29,5 +29,8 @@ Dentro da classe index.js nós atribuímos as demais funções que colaboram e c
 
 Nesse sprint - 9, também estamos utilizando o empacotador Webapck, que foi baixado e configurado a  partir dessa nova etapa do projeto.
 
+Além da configuração do webPack, também criamos o arquivo .gitignore, tendo em seu conteúdo o arquivos node_modules 
+dist, como orientação ao git.
+
 
 link no github: https://github.com/elhernandesbrito/web_project_around.git
