@@ -1,16 +1,14 @@
 
 export default class FormValidator {
+   
     constructor(formSelector) {
-        
         this._form = document.querySelector(formSelector);
         this._inputList = Array.from(this._form.querySelectorAll('.name-input'));
         this._submitButton = this._form.querySelector('.saveButton');
-        this._inputList.forEach(inputElement => {
-        inputElement.addEventListener('input', this._handleInput.bind(this));
-        });
         this._submitProfileInactive = 'popup__submit-save_inactive';
         this._submitCardsInactive = 'popupCards__submit-save_inactive';
     }
+
  
     _showInputError(inputElement, errorMessage) {
         const errorElement = inputElement.parentElement.querySelector('.form-input-error');
@@ -40,9 +38,11 @@ export default class FormValidator {
         if(isFormValid) {
             this._submitButton.classList.remove(this._submitProfileInactive);
             this._submitButton.classList.remove(this._submitCardsInactive);
+            this._submitButton.removeAttribute('disabled');
         }else {
             this._submitButton.classList.add(this._submitProfileInactive);
             this._submitButton.classList.add(this._submitCardsInactive);
+            this._submitButton.setAttribute('disabled', 'disabled');
         }
     }
 
@@ -51,19 +51,19 @@ export default class FormValidator {
         this._checkInputValidity(inputElement);
         
     }
-    enableValidation() {
-            this._form.addEventListener('submit', (event) => {
-                event.preventDefault(); 
-            });
-            this._toggleButtonState(); 
-            this._inputList.forEach(inputElement => {
-                inputElement.addEventListener('input', () => {
-                    this._checkInputValidity(inputElement);
-                });
-            });
-        }
-
+    
+   enableValidation() {
+       this._form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        });
+        this._toggleButtonState();
+        this._inputList.forEach(inputElement => {
+        inputElement.addEventListener('input', this._handleInput.bind(this));
+        });
     }
+
+
+}
 
 
     

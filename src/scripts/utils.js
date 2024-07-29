@@ -24,3 +24,4 @@ export {
     cardPopupTitle,
     cardPopupLink
 };
+

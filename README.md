@@ -1,5 +1,5 @@
 
-Projeto Sprint 8
+Projeto Sprint 9
 
 A página, design EUA afora, possui dois formulários - popup.
 
@@ -7,28 +7,27 @@ Um formulário contendo dois campos a serem preenchidos com texto, e o outro com
 
 Ambos os cartões passam por uma validação que acontece inicialmente no arquivo index.html,com a utilização de um atributo minlength e maxlength.
 
-Nesse sprint-8, as validações que já eram tratadas em Java Script, são refatoradas para a Linguagem de Programação Objeto - POO.
+Todas as validações que já eram tratadas em Java Script, foram refatoradas para a Linguagem de Programação Objeto - POO.
 
-Com a refatoração, duas classes/arquivos são criados.
+Além das Classes Card e FormValidator, o projeto agora conta com classes que são responsável por cada função/ atribuição da página.
 
-Sendo eles: Card.js e FormValidator.js
+Sendo a classe Section.js responsável pela lógica de renderizar as imagens dentro da página e também de adicionar novos elementos a ela.
 
-A classe Card.js recebe em seu construtor todos os elementos que compoem um cartão, os ouvintes de chamada relacionados a esses elementos e suas funções.
+Também foi adicionado a classe Popup.js com métodos responsáveis pela abertura e fechamento dos formulários(popup). Nele também é criado os metodos que garantem o fechamento dos modais utilizando a tecla 'Esc' e o acionamento do 'click', fora do formulário.
 
-É também nessa classe que é inserido o generateCard(), função responsável por retornar todos os elementos desse cartão.
+Também foi explorado o conceito de herança, por meio das classes PopupWithForm.js e PopupWithImage.js.
 
-A outra classe criada é a FormValidator,que recebe como parâmetro todos os formulários contemplados no projeto e os elementos/inputs que devem ser validados.
+Essas classes gerenciam o recebimento de imagens(PopupWithImage.js) e dos dados de texto contendo o nome e profissão. (PopupWithForm.js).
 
-Também é nessa classe encontra-se as funções que adicionam ou retiram as mensagens de erros e validam esses erros. Após a checagem, é chamado a função enableValidation() onde ocorre a etapa final de validação.
+Uma outra classe responsável por renderizar dados também foi criada, mas a classe re renderizar os dados do formulário chamado "Profile", que é a classe UserInfor.js.
 
-Todas as funções ja criadas anteriormentes sao distribuidas entre os arquivos utils.js e index.js.
+Para manter uma melhor organização,  estamos utilizando o arquivo utils.js, que é onde os seletores publicos são declarados.
 
-Nesse sprint, são explorados os seguintes assuntos:
+Todas as classes e arquivo exortam suas funções, que estão sendo chamadas/ importadas dentro de index.js.
 
-Criação de classe e passagem de parâmetros,
-refatoração de funções em POO,
-utilização de objetos para configuração (config)
+Dentro da classe index.js nós atribuímos as demais funções que colaboram e complementam com as demais classes.
 
+Nesse sprint - 9, também estamos utilizando o empacotador Webapck, que foi baixado e configurado a  partir dessa nova etapa do projeto.
 
 
 link no github: https://github.com/elhernandesbrito/web_project_around.git
