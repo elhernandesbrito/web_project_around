@@ -23,7 +23,7 @@ Uma outra classe responsável por renderizar dados também foi criada, mas a cla
 
 Para manter uma melhor organização,  estamos utilizando o arquivo utils.js, que é onde os seletores publicos são declarados.
 
-Todas as classes e arquivo exortam suas funções, que estão sendo chamadas/ importadas dentro de index.js.
+Todas as classes e arquivo exportam suas funções, que estão sendo chamadas/ importadas dentro de index.js.
 
 Dentro da classe index.js nós atribuímos as demais funções que colaboram e complementam com as demais classes.
 

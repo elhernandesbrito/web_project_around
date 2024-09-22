@@ -15,6 +15,9 @@ import {
     cardPopupLink
 } from '../scripts/utils.js';
 
+//trocar o render de cards via API
+//Adaptar as chamadas de busca, cria, deleta e atualiza
+//Validações da API
 
 const userInfo = new UserInfo({
     nameSelector: '.profile__name',
@@ -23,7 +26,7 @@ const userInfo = new UserInfo({
 
 const profilePopup = new PopupWithForm('.popup', 'popup_change_display', (formData) => {
     userInfo.setUserInfo({
-        name: formData.name,
+        name: formData.name,            
         profile: formData.explorar
     });
     profilePopup.close();
