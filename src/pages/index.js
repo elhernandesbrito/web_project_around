@@ -6,6 +6,7 @@ import PopupWithImage from '../scripts/PopupWithImage.js';
 import PopupWithForm from '../scripts/PopupWithForm.js';
 import UserInfo from '../scripts/UserInfo.js';
 import Section from '../scripts/Section.js';
+import Api from '../scripts/Api.js';
 import {
     editProfile,
     inputName,
@@ -15,10 +16,29 @@ import {
     cardPopupLink
 } from '../scripts/utils.js';
 
-//trocar o render de cards via API
-//Adaptar as chamadas de busca, cria, deleta e atualiza
-//Validações da API
+const api = new Api ({
+    baseUrl:'https://around.nomoreparties.co/v1/web-ptbr-cohort-13/users/me',
+    headers: {
+        authorization: '09ac6562-9d55-490a-8075-542d7a17a753',
+        'Content-Type': 'application/json'  
+    }
+})
+//let initialCards=[];
 
+api.getInitialCards()
+.then(cards => {
+    initialCards= cards;
+    console.log(initialCards);
+
+})
+.catch(err => {
+    console.error(err);
+});
+
+
+
+
+// Instância da classe UserInfo
 const userInfo = new UserInfo({
     nameSelector: '.profile__name',
     profileSelector: '.profile__explorer'
@@ -26,7 +46,7 @@ const userInfo = new UserInfo({
 
 const profilePopup = new PopupWithForm('.popup', 'popup_change_display', (formData) => {
     userInfo.setUserInfo({
-        name: formData.name,            
+        name: formData.name,
         profile: formData.explorar
     });
     profilePopup.close();

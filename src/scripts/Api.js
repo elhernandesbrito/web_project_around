@@ -1,20 +1,21 @@
-
 export default class Api {
-    constructor({baseUrl, headers, token}) {
-        this._baseUrl = baseUrl,
-        this._headers = headers,
-        this._token = token
-    }
+    constructor({baseUrl, headers}) {
+        this._baseUrl = baseUrl;
+        this._headers = headers;
+     }
+
+// Método para obter os dados dos cards
 
     getInitialCards() {
         return fetch(`${this._baseUrl}/cards`, {
-            method: "GET",
-            headers: {
-                authorization: this._token,
-                "Content-Type": "application/json"
-              }
+            headers:this._headers
         })
-    }
-
-    //outros metodos para trabalhar com API
+        .then(res => {
+            if (res.ok) {
+                return res.json();
+            }
+            return Promise.reject(`Erro: ${res.status}`);
+        })
+        .catch(err => console.error(err));
+    } 
 }
