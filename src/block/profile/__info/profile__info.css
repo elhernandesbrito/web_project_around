@@ -1,8 +1,8 @@
 .profile__info{
-    width:415px;
+    width:414px;
     height:77px;
     color:#FFFFFF;
-   margin-top:22px;
+    margin-top:22px;
     display:grid;
     grid-template-columns:373px 24px;
     grid-template-rows:39px 38px;

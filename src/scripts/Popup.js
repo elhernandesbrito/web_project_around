@@ -2,7 +2,11 @@ export default class Popup {
     constructor(popupSelector, openClass) {
         this._popup = document.querySelector(popupSelector);
         this._openClass = openClass;
-        this._closeButton = this._popup.querySelector('.popup__closeButton') || this._popup.querySelector('.popupCards__closeButton') || this._popup.querySelector('.imageDisplay__close');
+        this._closeButton = this._popup.querySelector('.popup__closeButton') 
+        || this._popup.querySelector('.popupCards__closeButton') 
+        || this._popup.querySelector('.imageDisplay__close')
+        || this._popup.querySelector('.popupWithConfirmation__closeButton')
+        || this._popup.querySelector('.popupAvatarUpdate__closeButton');
         this._handleEscClose = this._handleEscClose.bind(this);
         this._handleOverlayClose = this._handleOverlayClose.bind(this);
     }

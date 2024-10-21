@@ -10,6 +10,8 @@ const addCards = document.querySelector(".profile__addButton");
 const popupCardsForm = document.querySelector('.popupCards__form');
 const cardPopupTitle = popupCardsForm.querySelector(".popupCards__form-name");
 const cardPopupLink = popupCardsForm.querySelector(".popupCards__form-link");
+const avatarUpdateForm = document.querySelector('.popupAvatarUpdate__form');
+
 
 export {
     editProfile,

@@ -38,4 +38,15 @@
 @import url(../block/popupCards/__form/__form-name/popupCards__form-name.css);
 @import url(../block/popupCards/__form/__form-link/popupCards__form-link.css);
 @import url(../block/popupCards/__form/__submit-save/popupCards__submit-save.css);
+@import url(../block/popupWithConfirmation/popupWithConfirmation.css);
+@import url(../block/popupWithConfirmation/__closeButton/popupWithConfirmation__closeButton.css);
+@import url(../block/popupWithConfirmation/__form/popupWithConfirmation__form.css);
+@import url(../block/popupWithConfirmation/__form/__deleta/popupWithConfirmation__deleta.css);
+@import url(../block/popupWithConfirmation/__form/__submit-save/popupWithConfirmation__submit-save.css);
+@import url(../block/popupAvatarUpdate/popupAvatarUpdate.css);
+@import url(../block/popupAvatarUpdate/__closeButton/popupAvatarUpdate__closeButton.css);
+@import url(../block/popupAvatarUpdate/__form/popupAvatarUpdate__form.css);
+@import url(../block/popupAvatarUpdate/__form/__name/popupAvatarUpdate__name.css);
+@import url(../block/popupAvatarUpdate/__form/__form-link/popupAvatarUpdate__form-link.css);
+@import url(../block/popupAvatarUpdate/__form/__submit-save/popupAvatarUpdate__submit-save.css);
 @import url(../block/footer/footer.css)

@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <title>EUA AFORA</title>
-     <!--  <link rel="stylesheet" href="./src/pages/index.css">-->
        
    </head>
 
@@ -17,16 +16,20 @@
 
             <section class="profile">
                 <div class="profile__column">
-                 <img src="<%= require('./images/avatar.jpg') %>" alt="imagem avatar" class="profile__avatar">
-                            <div class="profile__info">
+                    <div class="profile__avatar-container">
+                        <img src="<%= require('./images/avatar.jpg') %>" alt="imagem avatar" class="profile__avatar">
+                        <img src="<%= require('./images/EditButton.png') %>" alt="imagem buton editar" class="profile__editAvatar">
+                    </div>
+
+                    <div class="profile__info">
                             <h1 class="profile__name">Jacques Custeau</h1>
-                 <img src="<%= require('./images/EditButton.png') %>" alt="imagem buton editar" class="profile__edit">
+                            <img src="<%= require('./images/EditButton.png') %>" alt="imagem buton editar" class="profile__edit">
                             <h3 class="profile__explorer">Explorar</h3>
-                        </div>
+                    </div>
                         
-                        <div class="profile__addButton">
-                <img src="<%= require('./images/VectorAdd.png') %>" alt="imagem button adicionar" class="profile__addButton-cards">
-                        </div>
+                    <div class="profile__addButton">
+                        <img src="<%= require('./images/VectorAdd.png') %>" alt="imagem button adicionar" class="profile__addButton-cards">
+                    </div>
                 </div>
             </section>
 
@@ -40,6 +43,11 @@
                         <h5 class="cards__card-name"></h5>
                         <div class="cards__cardLike"></div>
                     </div>
+                    <div class="cards__cardLike-wrapper">
+                        <span class="cards__like-counter">0</span>
+                    </div>
+                    <div class="cards__card-owner"></div>
+                    <div class="cards__card-created"></div>
                 </div>
             </template>
 
@@ -83,7 +91,7 @@
             </section>
 
             <section class="popupCards">
-      <img src="<%= require('./images/CloseIcon.png') %>" alt ="image Icon Close" class="popupCards__closeButton">
+                <img src="<%= require('./images/CloseIcon.png') %>" alt ="image Icon Close" class="popupCards__closeButton">
 
                 <form class="popupCards__form form" name="register" novalidate>
                     <h3 class="popupCards__EditarPerfil">Novo Local</h3>
@@ -110,10 +118,36 @@
                         value="" 
                         placeholder="Link da imagem" 
                         required>
-                       
-                        <span class="form-input-error form__input-link popupCards__form-link-error"></span>
+                    <span class="form-input-error form__input-link popupCards__form-link-error"></span>
                     </div>
                     <button type="submit" name="enviar" class="popupCards__submit-save saveButton">Salvar</button>
+                </form>
+            </section>
+
+            <section class="popupWithConfirmation">
+                <img src="<%= require('./images/CloseIcon.png') %>" alt ="image Icon Close" class="popupWithConfirmation__closeButton">
+
+                <form class="popupWithConfirmation__form form" name="register" novalidate>
+                    <h3 class="popupWithConfirmation__deleta">Tem Certeza?</h3>
+                    <button type="submit" name="enviar" class="popupWithConfirmation__submit-save saveButton">SIM</button>
+                </form>
+            </section>
+
+            <section class="popupAvatarUpdate">
+                <img src="<%= require('./images/CloseIcon.png') %>" alt ="image Icon Close" class="popupAvatarUpdate__closeButton">
+
+                <form class="popupAvatarUpdate__form form" name="register" novalidate>
+                    <h3 class="popupAvatarUpdate__name">Alterar a foto do perfil</h3>
+                    <input 
+                        class="popupAvatarUpdate__form-link name-input"
+                        type="url" 
+                        name="link" 
+                        value="" 
+                        placeholder="Link da imagem" 
+                        required>
+                        <span class="form-input-error form__input-link popupAvatarUpdate__form-link-error"></span>
+
+                    <button type="submit" name="enviar" class="popupAvatarUpdate__submit-save saveButton">SALVAR</button>
                 </form>
             </section>
            

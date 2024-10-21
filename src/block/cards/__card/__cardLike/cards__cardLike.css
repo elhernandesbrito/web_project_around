@@ -6,7 +6,6 @@
     margin-top:5px;
     cursor: pointer;
     display: flex;
-    
 }
 
 .cards__cardLike:hover {
@@ -16,5 +15,12 @@
 .cards__cardLike_active {
     background:url(https://practicum-content.s3.us-west-1.amazonaws.com/web-code/dom/moved_heart-filled.svg);
 }
+
+.cards__like-counter{
+    color: #000;
+    margin-left: 255px;
+}
+
+
 
 
