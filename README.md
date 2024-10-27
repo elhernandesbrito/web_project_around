@@ -46,3 +46,5 @@ O botão de salvar, recebe temporariamente através de uma função "renderLoadi
 
 
 link no github: https://github.com/elhernandesbrito/web_project_around.git
+
+Para visualizar o site carregado pelo servidor gitHub pages acesse: https://elhernandesbrito.github.io/web_project_around
